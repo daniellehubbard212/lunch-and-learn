@@ -1,0 +1,12 @@
+<h2>Your team is...</h2>
+<ng-content select=".logo"></ng-content>
+<div *ngFor="let person of team">
+   <div *ngIf="person.name !== 'Bernard'">
+    {{person.name}}
+   </div> 
+</div>
+
+<ng-content select=".projects"></ng-content>
+
+<input type="text" [(ngModel)]="teamName">
+<button type="button" (click)="process()">Process</button>

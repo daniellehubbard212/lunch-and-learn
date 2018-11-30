@@ -1,0 +1,24 @@
+<h1>Hello, {{ name }}</h1>
+I work at <a href="{{lsHome}}" target="_blank">LegitScript</a>
+
+<div>Your team is {{ teamName }}</div>
+<app-team [team]="team | async" (updateName)="updateName($event)">
+    <div class="projects">
+    <ul>
+      <label>The barracuda team works on...</label>
+      <li>
+        Portal UI
+      </li>
+      <li>
+        Portal Module Certifications
+      </li>
+      <li>
+        Portal Module Lookups
+      </li>
+    </ul>
+  </div>
+
+  <div class="logo">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Barracuda_laban.jpg/250px-Barracuda_laban.jpg">
+  </div>
+</app-team>
